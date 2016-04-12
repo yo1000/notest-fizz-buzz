@@ -23,37 +23,37 @@ public class FizzBuzz {
                 number);
     }
 
-    public class Fizz {
+    public static class Fizz {
         public String echo(int number) {
             return number % 3 == 0 ? "Fizz" : "";
         }
     }
-    public class Dizz {
+    public static class Dizz {
         public String echo(int number) {
             return number % 7 == 0 ? "Dizz" : "";
         }
     }
-    public class Bizz {
+    public static class Bizz {
         public String echo(int number) {
             return number % 13 == 0 ? "Bizz" : "";
         }
     }
-    public class Buzz {
+    public static class Buzz {
         public String echo(int number) {
             return number % 5 == 0 ? "Buzz" : "";
         }
     }
-    public class Duzz {
+    public static class Duzz {
         public String echo(int number) {
             return number % 11 == 0 ? "Duzz" : "";
         }
     }
-    public class Fuzz {
+    public static class Fuzz {
         public String echo(int number) {
             return number % 17 == 0 ? "Fuzz" : "";
         }
     }
-    public class Empty {
+    public static class Empty {
         public String echo(String echo, int number) {
             return echo.length() == 0 ? String.valueOf(number) : echo;
         }
