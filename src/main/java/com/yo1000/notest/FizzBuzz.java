@@ -12,29 +12,50 @@ public class FizzBuzz {
     }
 
     protected String fizzBuzz(int number) {
-        StringBuilder builder = new StringBuilder();
+        return new Empty().echo(new StringBuilder()
+                        .append(new Fizz().echo(number))
+                        .append(new Dizz().echo(number))
+                        .append(new Bizz().echo(number))
+                        .append(new Buzz().echo(number))
+                        .append(new Duzz().echo(number))
+                        .append(new Fuzz().echo(number))
+                        .toString(),
+                number);
+    }
 
-        if (number % 3 == 0) {
-            builder.append("Fizz");
+    public class Fizz {
+        public String echo(int number) {
+            return number % 3 == 0 ? "Fizz" : "";
         }
-        if (number % 7 == 0) {
-            builder.append("Dizz");
+    }
+    public class Dizz {
+        public String echo(int number) {
+            return number % 7 == 0 ? "Dizz" : "";
         }
-        if (number % 13 == 0) {
-            builder.append("Bizz");
+    }
+    public class Bizz {
+        public String echo(int number) {
+            return number % 13 == 0 ? "Bizz" : "";
         }
-        if (number % 5 == 0) {
-            builder.append("Buzz");
+    }
+    public class Buzz {
+        public String echo(int number) {
+            return number % 5 == 0 ? "Buzz" : "";
         }
-        if (number % 11 == 0) {
-            builder.append("Duzz");
+    }
+    public class Duzz {
+        public String echo(int number) {
+            return number % 11 == 0 ? "Duzz" : "";
         }
-        if (number % 17 == 0) {
-            builder.append("Fuzz");
+    }
+    public class Fuzz {
+        public String echo(int number) {
+            return number % 17 == 0 ? "Fuzz" : "";
         }
-
-        return builder.length() == 0
-                ? String.valueOf(number)
-                : builder.toString();
+    }
+    public class Empty {
+        public String echo(String echo, int number) {
+            return echo.length() == 0 ? String.valueOf(number) : echo;
+        }
     }
 }
