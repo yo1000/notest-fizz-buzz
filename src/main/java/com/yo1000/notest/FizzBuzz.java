@@ -12,7 +12,8 @@ public class FizzBuzz {
     }
 
     protected String fizzBuzz(int number) {
-        return new Empty().echo(new StringBuilder()
+        return new Empty().echo(
+                new StringBuilder()
                         .append(new Fizz().echo(number))
                         .append(new Dizz().echo(number))
                         .append(new Bizz().echo(number))
