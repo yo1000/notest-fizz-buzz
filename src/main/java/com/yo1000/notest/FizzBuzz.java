@@ -12,14 +12,13 @@ public class FizzBuzz {
     }
 
     protected String fizzBuzz(int number) {
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        return fizzBuzz.result(new StringBuilder()
-                        .append(fizzBuzz.fizz(number))
-                        .append(fizzBuzz.dizz(number))
-                        .append(fizzBuzz.bizz(number))
-                        .append(fizzBuzz.buzz(number))
-                        .append(fizzBuzz.duzz(number))
-                        .append(fizzBuzz.fuzz(number))
+        return result(new StringBuilder()
+                        .append(fizz(number))
+                        .append(dizz(number))
+                        .append(bizz(number))
+                        .append(buzz(number))
+                        .append(duzz(number))
+                        .append(fuzz(number))
                         .toString(),
                 number);
     }
