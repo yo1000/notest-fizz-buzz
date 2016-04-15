@@ -12,51 +12,36 @@ public class FizzBuzz {
     }
 
     protected String fizzBuzz(int number) {
-        return new Empty().echo(
-                new StringBuilder()
-                        .append(new Fizz().echo(number))
-                        .append(new Dizz().echo(number))
-                        .append(new Bizz().echo(number))
-                        .append(new Buzz().echo(number))
-                        .append(new Duzz().echo(number))
-                        .append(new Fuzz().echo(number))
+        return result(new StringBuilder()
+                        .append(fizz(number))
+                        .append(dizz(number))
+                        .append(bizz(number))
+                        .append(buzz(number))
+                        .append(duzz(number))
+                        .append(fuzz(number))
                         .toString(),
                 number);
     }
 
-    public static class Fizz {
-        public String echo(int number) {
-            return number % 3 == 0 ? "Fizz" : "";
-        }
+    public String fizz(int number) {
+        return number % 3 == 0 ? "Fizz" : "";
     }
-    public static class Dizz {
-        public String echo(int number) {
-            return number % 7 == 0 ? "Dizz" : "";
-        }
+    public String dizz(int number) {
+        return number % 7 == 0 ? "Dizz" : "";
     }
-    public static class Bizz {
-        public String echo(int number) {
-            return number % 13 == 0 ? "Bizz" : "";
-        }
+    public String bizz(int number) {
+        return number % 13 == 0 ? "Bizz" : "";
     }
-    public static class Buzz {
-        public String echo(int number) {
-            return number % 5 == 0 ? "Buzz" : "";
-        }
+    public String buzz(int number) {
+        return number % 5 == 0 ? "Buzz" : "";
     }
-    public static class Duzz {
-        public String echo(int number) {
-            return number % 11 == 0 ? "Duzz" : "";
-        }
+    public String duzz(int number) {
+        return number % 11 == 0 ? "Duzz" : "";
     }
-    public static class Fuzz {
-        public String echo(int number) {
-            return number % 17 == 0 ? "Fuzz" : "";
-        }
+    public String fuzz(int number) {
+        return number % 17 == 0 ? "Fuzz" : "";
     }
-    public static class Empty {
-        public String echo(String echo, int number) {
-            return echo.length() == 0 ? String.valueOf(number) : echo;
-        }
+    public String result(String result, int number) {
+        return result.length() == 0 ? String.valueOf(number) : result;
     }
 }
