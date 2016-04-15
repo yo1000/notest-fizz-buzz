@@ -9,7 +9,7 @@
 ## How to start
 
 ```
-$ git https://github.com/yo1000/notest-fizz-buzz.git
+$ git clone https://github.com/yo1000/notest-fizz-buzz.git
 $ cd notest-fizz-buzz
 $ cat src/main/java/com/yo1000/notest/FizzBuzz.java
 ```
