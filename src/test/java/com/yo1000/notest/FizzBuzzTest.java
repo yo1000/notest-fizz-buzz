@@ -36,7 +36,7 @@ public class FizzBuzzTest {
     }
     @Test
     public void fuzzTest() {
-        FizzBuzz fuzz = new FizzBuzz();
+        FizzBuzz fizzBuzz = new FizzBuzz();
         Assert.assertEquals("Fuzz", fizzBuzz.fuzz(17));
         Assert.assertEquals("", fizzBuzz.fuzz(2));
     }
